@@ -1,0 +1,4 @@
+ofxAssimpModelLoader
+ofxCurlNoise
+ofxGui
+ofxLeapMotion2
