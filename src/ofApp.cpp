@@ -7,6 +7,7 @@
      
      camera.setDistance(750);
      
+     
      // My Little Bool for Instructions.
      activate = false;
      // Loading Instructions.
