@@ -71,7 +71,7 @@ public:
      float shaderControl;
 
     //---------------------
-    //-the Veil & Background Ambience.
+    //-Background Ambience.
     
     ofSoundPlayer mySound;
     

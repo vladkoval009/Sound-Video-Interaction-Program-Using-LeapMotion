@@ -40,9 +40,9 @@
      
      // A one time initialization putting my data into the array.
 
-     string myHarpSoundsArray[] = {"harpSoundMP3/harpA2.mp3", "harpSoundMP3/harpA4.mp3", "harpSoundMP3/harpA6.mp3", "harpSoundMP3/harpB3.mp3","harpSoundMP3/harpB5.mp3","harpSoundMP3/harpB6.mp3","harpSoundMP3/harpC5.mp3","harpSoundMP3/harpD4.mp3","harpSoundMP3/harpD4.mp3" "harpSoundMP3/harpE3.mp3","harpSoundMP3/harpE5.mp3"};
+     string myHarpSoundsArray[] = {"harpSoundMP3/harpA2.mp3", "harpSoundMP3/harpA4.mp3", "harpSoundMP3/harpA6.mp3", "harpSoundMP3/harpB3.mp3","harpSoundMP3/harpB5.mp3","harpSoundMP3/harpB6.mp3","harpSoundMP3/harpC5.mp3","harpSoundMP3/harpD4.mp3"};
      
-     for (int i = 0; i < 11; i++) {
+     for (int i = 0; i < 8; i++) {
      
      ofSoundPlayer playHarp;
          playHarp.load(myHarpSoundsArray[i]);
@@ -56,7 +56,7 @@
 
      // A one time initialization putting my data into the array.
 
-     string myCelloSoundArray[] = {"celloSoundsMP3/Cello1.mp3","celloSoundsMP3/Cello1.mp3","celloSoundsMP3/Cello2.mp3","celloSoundsMP3/Cello3.mp3","celloSoundsMP3/Cello4.mp3","celloSoundsMP3/Cello5.mp3","celloSoundsMP3/Cello6.mp3",};
+     string myCelloSoundArray[] = {"celloSoundsMP3/Cello1.mp3","celloSoundsMP3/Cello1.mp3","celloSoundsMP3/Cello2.mp3","celloSoundsMP3/Cello3.mp3","celloSoundsMP3/Cello4.mp3","celloSoundsMP3/Cello5.mp3","celloSoundsMP3/Cello6.mp3"};
      
      for (int i = 0; i < 6; i++) {
          
@@ -195,7 +195,7 @@
 
              if (velocity.length() > 512) {
 
-                 myHarpSounds[ofGetFrameNum() % 11].play(); // % BY THE NUMBER OF A AUDIO FILES.
+                 myHarpSounds[ofGetFrameNum() % 8].play(); // % BY THE NUMBER OF A AUDIO FILES.
            };
          };
         };
