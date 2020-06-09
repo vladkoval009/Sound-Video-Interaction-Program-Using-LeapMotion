@@ -29,7 +29,6 @@ public:
        Leap::Controller controller;
        Leap::Frame frame;
        Leap::Finger finger;
-       Leap::Hand hand,hand2;
     
        //----------------------
        // Setting up the constatns & vectors for the Veil.
@@ -48,8 +47,6 @@ public:
        ofVbo myVbo;
        ofVbo pointVbo;
            
-       bool startingPos; // the fixed position of pixels.
-
     //----------------------
     // Preparing all my shaders here.
     

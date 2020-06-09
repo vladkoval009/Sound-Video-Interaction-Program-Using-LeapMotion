@@ -35,7 +35,6 @@
    
      myVideo.load("videoAssets/thunderWaves.mp4");
      myVideo.play();
-     startingPos = true;
      
      //=====================HARP SOUND Initializing=======================//
      
@@ -159,18 +158,6 @@
               
           };
      
-     //==========================Picking the hands & fingers for the veil===========
-          
-     for(int i=0; i<frame.hands().count(); i++) {
-         hand = frame.hands()[0];
-         hand2 = frame.hands()[1];
-         for(int j=0; j<hand.fingers().count() + hand2.fingers().count(); j++) {
-             
-             finger = frame.fingers()[j];
-             
-         };
-     };
-     
     //================The mysterious veil===================
 
        if (myVideo.isFrameNew()) {
@@ -182,15 +169,11 @@
                    float g = (float)pixelsVBO_1[(int)(j * myVideo.getWidth() * 3 + i * 3 + 1)] /256.0;
                    float b = (float)pixelsVBO_1[(int)(j * myVideo.getWidth() * 3 + i * 3 + 2)] /256.0;
 
-                   float brightness = (r + g + b) / 3.0f ;
 
                    myColor[j * WIDTH + i] = ofFloatColor(r,g,b,1.0);
-                   if(startingPos == false)
-                       
-                   myVerts[j * WIDTH + i] = ofVec3f(i-WIDTH/2, j-HEIGHT/2,brightness*finger.tipPosition().z);
-                   else myVerts[j * WIDTH + i] = ofVec3f(i-WIDTH/2, j-HEIGHT/2,0);
+              
+                   myVerts[j * WIDTH + i] = ofVec3f(i-WIDTH/2, j-HEIGHT/2,0);
                    
-                   int size = sizeof(pixelsVBO_1);
                    
                }
            }
@@ -322,7 +305,7 @@
      //=============================================
 
          ofPushMatrix();
-         glPointSize(0.3);
+         glPointSize(0.2);
          ofScale(3, 3, 3);
          ofTranslate(0, 0, 0);
          myVbo.draw(GL_POINTS,0,PARTICLES_VIDEO);
