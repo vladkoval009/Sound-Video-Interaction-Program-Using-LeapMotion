@@ -175,8 +175,8 @@
                    myVerts[j * WIDTH + i] = ofVec3f(i-WIDTH/2, j-HEIGHT/2,0);
                    
                    
-               }
-           }
+               };
+           };
            
            myVbo.setVertexData(myVerts,PARTICLES_VIDEO,GL_DYNAMIC_DRAW_ARB);
            myVbo.setColorData(myColor,PARTICLES_VIDEO,GL_DYNAMIC_DRAW_ARB);

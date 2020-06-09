@@ -39,13 +39,10 @@ public:
        static const int PARTICLES_VIDEO = WIDTH * HEIGHT;
        
        ofVec3f myVerts[PARTICLES_VIDEO];
-       ofVec3f pointVerts[PARTICLES_VIDEO];
 
        ofFloatColor myColor[PARTICLES_VIDEO];
-       ofFloatColor pointColor[PARTICLES_VIDEO];
        
        ofVbo myVbo;
-       ofVbo pointVbo;
            
     //----------------------
     // Preparing all my shaders here.
